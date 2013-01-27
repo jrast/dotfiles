@@ -78,10 +78,6 @@ set noswapfile
 call pathogen#infect()
 
 
-""""""""""""""""""""""
-"" Python IDE settings
-""""""""""""""""""""""
-
 " Settings vor vim-powerline
 " github.com/Lokaltog/powerline
 set laststatus=2
@@ -90,11 +86,4 @@ set laststatus=2
 " github.com/kien/ctrlp.vim
 set wildignore+=*.pyc
 
-" Python-Mode Plugin
-" github.com/klen/python-mode
-"" No Config at the moment
-
-" Python folding
-" github.com/vim-scripts/Efficient-python folding
-set nofoldenable
 
