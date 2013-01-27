@@ -5,7 +5,12 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="vimrc vim"
+
+while getopts u: opt; do
+    case "$opt" in
+        u) dir=/home/$OPTARG/dotfiles; olddir=/home/$OPTARG/dotfiles_old;;
+    esac
+done
 
 # Create backup folder
 echo "Creating $olddir for backup of any existing dotfiles in ~"
