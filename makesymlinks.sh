@@ -19,15 +19,15 @@ echo "...Done"
 
 # Move and create Symlinks
 for file in $dir/*; do
-    basename=$(basename $file)
-    if [ $basename = "README.md" -o $basename = "makesymlinks.sh" ]; then
+    name=$(basename $file)
+    if [ $name = "README.md" -o $name = "makesymlinks.sh" -o $name = ".gitmodules" -o $name = ".gitignore" ]; then
         continue
     fi
-    if [ -e ~/.$basename ]; then
-        echo "Moving .$basename from ~ to $olddir"
-        mv ~/.$basename $olddir/
+    if [ -e ~/.$name ]; then
+        echo "Moving .$name from ~ to $olddir"
+        mv ~/.$name $olddir/
     fi
     echo "Create symlink to $file in home directory."
-    ln -s $file ~/.$basename
+    ln -s $file ~/.$name
 done
 
