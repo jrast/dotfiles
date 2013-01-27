@@ -28,11 +28,11 @@ for file in $dir/*; do
     if [ $name = "README.md" -o $name = "makesymlinks.sh" -o $name = ".gitmodules" -o $name = ".gitignore" ]; then
         continue
     fi
-    if [ -e ~/.$name ]; then
+    if [ -e $dir/.$name ]; then
         echo "Moving .$name from ~ to $olddir"
-        mv ~/.$name $olddir/
+        mv $dir/.$name $olddir/
     fi
     echo "Create symlink to $file in home directory."
-    ln -s $file ~/.$name
+    ln -s $file $dir/.$name
 done
 
