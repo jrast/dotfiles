@@ -4,9 +4,8 @@ autocmd! bufwritepost .vimrc source %
 " use extended function of vim
 set nocompatible
 
-" Better copy & paste
-set pastetoggle=<F2>
-set clipboard=unnamed
+" make backspace work like most other apps
+set backspace=2
 
 " Scroll before the cursor reaches bottom or top of screen
 set scrolloff=5
