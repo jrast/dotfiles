@@ -3,6 +3,7 @@ autocmd! bufwritepost .vimrc source %
 
 " use extended function of vim
 set nocompatible
+set encoding=utf-8
 
 " make backspace work like most other apps
 set backspace=2
