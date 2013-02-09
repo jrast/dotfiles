@@ -4,19 +4,22 @@
 #########################
 
 homedir=~
+user=$USER
 
 while getopts u: opt; do
     case "$opt" in
-        u) homedir=/home/$OPTARG;;
+        u) user=$OPTARG;;
     esac
 done
 
+homedir=/home/$user
 dir=$homedir/dotfiles
 olddir=$homedir/dotfiles_old
 
 # Create backup folder
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
+chown $user:$user $olddir
 echo "...Done"
 
 
@@ -32,5 +35,6 @@ for file in $dir/*; do
     fi
     echo "Create symlink to $file in home directory."
     ln -s $file $homedir/.$name
+    chown $user:$user $homedir/.$name
 done
 
