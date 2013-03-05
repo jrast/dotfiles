@@ -90,13 +90,19 @@ fi
 # fi
 #
 
+## Source all Scripts in ~/.bash_resources:
+if [ -d  "${HOME}/.bash_resources" ]; then
+    for f in ${HOME}/.bash_resources/*; do
+        source $f
+    done
+fi
+
 # PS1 Anzeige von Git status
+# git-promt.sh sollte schon "gesourced" sein von oben
 if [ -f "${HOME}/.bash_resources/git-prompt.sh" ]; then
-	source "${HOME}/.bash_resources/git-prompt.sh"
     # Uncomment the following two lines if you have a
     # fast HDD or only small git repos
 	#GIT_PS1_SHOWDIRTYSTATE=true
 	#GIT_PS1_SHOWUNTRACKEDFILES=true
 	PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]$(__git_ps1 " (%s)") \n\$ '
 fi
-
