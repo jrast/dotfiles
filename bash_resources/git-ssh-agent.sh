@@ -1,6 +1,5 @@
 #!bash
 if [ "$SSH_AUTH_SOCK" != "" ]; then
-    echo "SSH-Agent allready running"
     return
 fi
 . .agent > /dev/null
