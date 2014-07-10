@@ -93,4 +93,5 @@ set laststatus=2
 " github.com/kien/ctrlp.vim
 set wildignore+=*.pyc
 
-
+" Settings for Quicktasks
+let g:quicktask_snip_path = '~/todo/snips'
