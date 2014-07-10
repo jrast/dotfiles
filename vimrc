@@ -47,6 +47,11 @@ vnoremap <Leader>s :sort<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+
+" Jump to subject (who needs Umlauts in normal mode?)
+nnoremap ü <C-]>
+nnoremap ä <C-O>
+
 " Color scheme
 set t_Co=256
 colorscheme molokai
