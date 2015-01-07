@@ -16,3 +16,9 @@
 [submodule "vim/bundle/vim-quicktask"]
 	path = vim/bundle/vim-quicktask
 	url = https://github.com/aaronbieber/vim-quicktask.git
+[submodule "vim/bundle/jedi-vim"]
+	path = vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vim/bundle/flake8"]
+	path = vim/bundle/flake8
+	url = https://github.com/nvie/vim-flake8

@@ -100,3 +100,11 @@ set wildignore+=*.pyc
 
 " Settings for Quicktasks
 let g:quicktask_snip_path = '~/todo/snips'
+
+" Set Markdown Syntax for .md files
+au BufRead,BufNewFile *.md set filetype=markdown
+
+" Flake8 Ignore
+let g:flake8_ignore="E126,E127,E128"
+" Run Flake8 after saving of python files
+autocmd BufWritePost *.py call Flake8()

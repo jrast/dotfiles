@@ -108,6 +108,7 @@ if [ -f "${HOME}/.bash_resources/git-prompt.sh" ]; then
 fi
 
 if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
-    export WORKON_HOME=${HOME}/Envs
+    export WORKON_HOME=${HOME}/.virtualenvs
+    export PROJECT_HOME=$HOME/projects
     source /usr/local/bin/virtualenvwrapper.sh
 fi
